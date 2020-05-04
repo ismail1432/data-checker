@@ -2,6 +2,7 @@
 
 namespace Eniams\DataChecker\Tests;
 
+use Eniams\DataChecker\Constraints\Slug;
 use Eniams\DataChecker\Constraints\SlugValidator;
 use Symfony\Component\Validator\Test\ConstraintValidatorTestCase;
 
@@ -17,7 +18,7 @@ final class SlugValidatorTest extends ConstraintValidatorTestCase
      */
     public function testSlugIsValid($slug)
     {
-        $this->validator->validate($slug, new SlugValidator());
+        $this->validator->validate($slug, new Slug());
 
         $this->assertNoViolation();
     }
