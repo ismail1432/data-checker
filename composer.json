@@ -1,0 +1,41 @@
+{
+  "name": "eniams/data-checker",
+  "type": "library",
+  "description": "Add more constraint to the Symfony Validator Component",
+  "keywords": ["symfony", "validator", "constraint"],
+  "homepage": "https://github.com/ismail1432/data-checker",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Smaïne Milianni",
+      "email": "contact@smaine.me"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "symfony/validator": "^4.3|^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Eniams\\DataChecker\\": "src/"
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  },
+  "minimum-stability": "dev",
+  "require-dev": {
+    "symfony/phpunit-bridge": "^5.0",
+    "friendsofphp/php-cs-fixer": "^2.17@dev",
+    "phpstan/phpstan": "^0.12.0@dev",
+    "symfony/dependency-injection": "^4.3|^5.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Eniams\\DataChecker\\Tests\\": "./tests"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
