@@ -23,8 +23,27 @@ final class SlugValidatorTest extends ConstraintValidatorTestCase
         $this->assertNoViolation();
     }
 
+    /**
+     * @dataProvider wrongSlugProvider
+     */
+    public function testSlugIsNotValid($slug)
+    {
+        $this->validator->validate($slug, new Slug());
+
+        $this->buildViolation('slug')
+            ->setParameter('{{ value }}', $slug)
+            ->setCode(Slug::SLUG_ERROR)
+            ->assertRaised();
+    }
+
     public function wrongSlugProvider()
     {
+        return [
+            ['le-titre de-mon-article))'],
+            ['--article-de-press'],
+            ['1--another-awesome-article-1234'],
+            ['A)VERY(GOOD-ARTICLE'],
+        ];
     }
 
     public function goodSlugProvider(): array
