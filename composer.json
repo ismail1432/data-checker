@@ -13,6 +13,7 @@
   ],
   "require": {
     "php": "^7.2",
+    "eniams/spy": "dev-master",
     "symfony/validator": "^4.3|^5.0"
   },
   "autoload": {
