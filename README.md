@@ -9,7 +9,7 @@
 Available validators, missing one ?
 Please add it with a PR
 
-| Slug | Doc Link shoud be here |
+| Slug | ![documentation](/doc/data-checker.md?#Slug) |
 |------|------------------------|
 |      |                        |
 |      |                        |
